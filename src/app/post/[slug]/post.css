@@ -1,0 +1,30 @@
+
+.post h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.post p {
+    margin: 5px 0px;
+}
+.post ul {
+    list-style: circle;
+    margin-bottom: 10px;
+}
+.post ol {
+    list-style: circle;
+    margin-bottom: 10px;
+}
+.post h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.post h4,h5,h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.post p {
+    letter-spacing: 1px;
+}
