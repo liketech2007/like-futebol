@@ -13,7 +13,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [theme,setTheme] = useState("dark")
+  const [theme,setTheme] = useState("")
   useEffect(() => {
     const getTheme = localStorage.getItem("theme")
     setTheme(getTheme === null ? theme : getTheme)
