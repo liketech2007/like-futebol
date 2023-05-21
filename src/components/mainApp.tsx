@@ -16,8 +16,8 @@ export function MAinApp(data:any) {
 
     return (
         <main className="p-4 flex flex-col gap-8 justify-center items-center md:w-[60%] lg:w-[80%] min-h-[70vh] ">
-            <div>
-                <h2 className="text-2xl mb-8 font-bold">Ligas</h2>
+            <div className="flex justify-center items-center flex-col gap-4">
+                <h2 className="text-2xl mb-8 font-bold self-start">Ligas</h2>
                 <div className="max-w-[300px] md:max-w-[600px] lg:max-w-full snap-mandatory snap-x overflow-x-scroll flex gap-6 md:gap-12">
                     {
                         data.data.ligas.map((liga:any) => {
