@@ -44,7 +44,7 @@ export function MAinApp(data:any) {
                         })
                     }
                 </div>
-                <div>
+                <div className="flex flex-col justify-center items-center">
                     <h2 className="text-2xl font-bold pt-4">{ligaCheck.name}</h2>
 
                     <div className="flex flex-col justify-center items-center">
