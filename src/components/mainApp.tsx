@@ -15,21 +15,21 @@ export function MAinApp(data:any) {
     })
 
     return (
-        <main className="p-4 flex flex-col gap-8 justify-center md:w-[60%] lg:w-[80%] min-h-[70vh] ">
+        <main className="p-4 flex flex-col gap-8 justify-center items-center md:w-[60%] lg:w-[80%] min-h-[70vh] ">
             <div>
                 <h2 className="text-2xl mb-8 font-bold">Ligas</h2>
                 <div className="max-w-[300px] md:max-w-[600px] lg:max-w-full snap-mandatory snap-x overflow-x-scroll flex gap-6 md:gap-12">
                     {
                         data.data.ligas.map((liga:any) => {
                             return (
-                                <div key={liga.id} className={`flex justify-center items-center flex-col gap-2 max-w-[50px] ${ligaSelect === liga.id ? "border-red-400 border-t-0 border-l-0 border-r-0 border-b-2 drop-shadow-lg" : ""}`} onClick={async() => {
+                                <div key={liga.id} className={`flex justify-center items-center flex-col gap-2 max-w-[50px] ${ligaSelect === liga.id ? "border-button border-t-0 border-l-0 border-r-0 border-b-2 drop-shadow-lg" : ""}`} onClick={async() => {
                                     setJogos({
                                             jogos: false,
                                             text: ""
                                         })
                                     setLigaSelect(liga.id)
                                     setTrocaLiga(true)
-                                    const res = await fetch(`http://localhost:3000/jogos?id=${liga.id}`,{
+                                    const res = await fetch(`https://like-futebol.vercel.app/jogos?id=${liga.id}`,{
                                         method: "POST",
                                     })
                                     const data = await res.json()
@@ -42,19 +42,26 @@ export function MAinApp(data:any) {
                         })
                     }
                 </div>
+                <div className="flex justify-center items-center">
+                <div key={data.data.videos[0].embed} className="p-4 flex flex-col gap-6 min-w-[50%] border-button border-t-0 border-l-0 border-r-0 border-b-2 drop-shadow-lg">
+                                <h1 className="text-xl font-bold">{data.data.videos[0].title}</h1>
+                                <div dangerouslySetInnerHTML={{ __html: data.data.videos[0].embed }}></div>
+                                <div className="text-xs font-tin">{dateFormat(data.data.videos[0].date)}</div>
+                            </div>
+                </div>
                 <div>
                     <h2 className="text-2xl font-bold pt-4">{ligaCheck.name}</h2>
 
                     <div>
                         {
                             trocaLiga === false ? (
-                                <div className="border border-secondary my-6 text-xs md:text-base">
-                                    <div className="flex justify-between">
-                                        <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Casa</div>
-                                        <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Fora</div>
-                                        <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Golos</div>
-                                        <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Data</div>
-                                        <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Estado</div>
+                                <div className="my-6 text-xs md:text-base bg-gray-300 dark:bg-[#1E1E1F] dark:text-white p-4 rounded-lg">
+                                    <div className="flex justify-between bg-white dark:bg-secondary rounded-lg">
+                                        <div className=" w-1/5 text-center p-4">Casa</div>
+                                        <div className=" w-1/5 text-center p-4">Fora</div>
+                                        <div className=" w-1/5 text-center p-4">Golos</div>
+                                        <div className=" w-1/5 text-center p-4">Data</div>
+                                        <div className="w-1/5 text-center p-4">Estado</div>
                                     </div>
                                     {
                                         data.data.jogos.matches.length === 0 ? <div className="flex justify-center items-center min-h-[60vh]">Não tem Jogos</div> : data.data.jogos.matches.map((jogo:any) => {
@@ -75,13 +82,13 @@ export function MAinApp(data:any) {
                                     <SpinnerGap size={48} className="animate-spin" />
                               </div>
                             ) : jogos.text === "Não tem Jogos" && jogos.jogos === null ? <div className="flex justify-center items-center min-h-[60vh]">Não tem Jogos</div> : (
-                                <div className="border border-secondary my-6 text-xs md:text-base">
-                                <div className="flex justify-between">
-                                    <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Casa</div>
-                                    <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Fora</div>
-                                    <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Golos</div>
-                                    <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Date</div>
-                                    <div className="border-t-0 border-r-2 border-black border-b-2 border-l-0 w-1/5 text-center">Tempo</div>
+                                <div className="my-6 text-xs md:text-base  bg-gray-300 dark:bg-[#1E1E1F] dark:text-white p-4 rounded-lg">
+                                <div className="flex justify-between  bg-white dark:bg-secondary rounded-lg">
+                                    <div className=" w-1/5 text-center p-4">Casa</div>
+                                    <div className=" w-1/5 text-center p-4">Fora</div>
+                                    <div className=" w-1/5 text-center p-4">Golos</div>
+                                    <div className=" w-1/5 text-center p-4">Date</div>
+                                    <div className=" w-1/5 text-center p-4">Estado</div>
                                 </div>
                                     {
                                         jogos.jogos.map((jogo:any) => {
@@ -103,8 +110,8 @@ export function MAinApp(data:any) {
                 </div>
             </div>
             <div>
-                <h2 className="text-2xl font-bold my-8">Melhores Gols</h2>
-                <div className="flex flex-wrap gap-6">
+                <h2 className="text-2xl font-bold my-8">Melhores Golos</h2>
+                <div className="flex flex-wrap justify-center items-ceenter gap-6 md:gap-12">
                 {
                     data.data.videos.map((video:any) => {
                        
@@ -112,7 +119,7 @@ export function MAinApp(data:any) {
                         return null
                     }else {
                         return (
-                            <div key={video.embed} className="flex flex-col gap-6 min-w-full">
+                            <div key={video.embed} className="p-4 flex flex-col gap-6 min-w-[70%] border-button border-t-0 border-l-0 border-r-0 border-b-2 drop-shadow-lg">
                                 <h1 className="text-xl font-bold">{video.title}</h1>
                                 <div dangerouslySetInnerHTML={{ __html: video.embed }}></div>
                                 <div className="text-xs font-tin">{dateFormat(video.date)}</div>

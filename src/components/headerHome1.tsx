@@ -22,22 +22,22 @@ export function HeaderHome1() {
         <nav className="hidden md:block">
           <ul className="flex gap-6  items-center justify-between">
           <li>
-              <Link href="/home" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Home</Link>
+              <Link href="/home" className="hover:bg-button hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Home</Link>
             </li>
             <li>
-              <Link href="/list-posts" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Blog</Link>
+              <Link href="/list-posts" className="hover:bg-button hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Blog</Link>
             </li>
             <li>
-              <Link href="/sobre-nos" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Sobre nós</Link>
+              <Link href="/sobre-nos" className="hover:bg-button hover:text-white  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Sobre nós</Link>
             </li>
             <li>
-                    <Link href="/contacte-nos" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Contacte nós</Link>
+                    <Link href="/contacte-nos" className="hover:bg-button hover:text-white  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Contacte nós</Link>
               </li>
             <li>
-              <Link href="/politica-de-privacidade" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Política de <br /> Privacidade</Link>
+              <Link href="/politica-de-privacidade" className="hover:bg-button hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Política de <br /> Privacidade</Link>
             </li>
             <li>
-              <button className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center" onClick={() => {
+              <button className="hover:bg-button hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center" onClick={() => {
               }}>
                { theme === "" ? <Moon size={32} onClick={() => {
                       localStorage.setItem("theme", "dark")
@@ -59,22 +59,22 @@ export function HeaderHome1() {
           {
             openMenu && <ul className="flex gap-4 justify-center items-center flex-col">
                 <li>
-              <Link href="/home" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Home</Link>
+              <Link href="/home" className="hover:bg-button hover:text-white  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Home</Link>
             </li>
                     <li>
-                    <Link href="/list-posts" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Blog</Link>
+                    <Link href="/list-posts" className="hover:bg-button hover:text-white  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Blog</Link>
                   </li>
                   <li>
-                    <Link href="/sobre-nos" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Sobre nós</Link>
+                    <Link href="/sobre-nos" className="hover:bg-button hover:text-white  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Sobre nós</Link>
                   </li>
                   <li>
-                    <Link href="/contacte-nos" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Contacte nós</Link>
+                    <Link href="/contacte-nos" className="hover:bg-button hover:text-white  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Contacte nós</Link>
                   </li>
                   <li>
-                    <Link href="/politica-de-privacidade" className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center">Política de <br /> Privacidade</Link>
+                    <Link href="/politica-de-privacidade" className="hover:bg-button hover:text-white  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Política de <br /> Privacidade</Link>
                   </li>
                   <li>
-                    <button className="hover:bg-button hover:text-white dark:hover:bg-white dark:hover:text-button transition-all py-1 px-6 rounded-lg flex justify-center items-center" onClick={() => {
+                    <button className="hover:bg-button hover:text-white  transition-all py-1 px-6 rounded-lg flex justify-center items-center" onClick={() => {
                 
               }}>
                     { theme === "" ? <Moon size={32} onClick={() => {

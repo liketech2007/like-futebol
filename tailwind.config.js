@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        button: "#000000",
+        button: "#00BF63",
         textP: "#000000",
         textS: "#ffffff",
         primary: "#ffffff",

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://like-blog.vercel.app/
+Host: https://like-futebol.vercel.app
 
 # Sitemaps
-Sitemap: https://like-blog.vercel.app/sitemap.xml
+Sitemap: https://like-futebol.vercel.app/sitemap.xml

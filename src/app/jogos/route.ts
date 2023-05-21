@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
     const res = await fetch(`http://api.football-data.org/v4/competitions/${id}/matches?dateFrom=${yesterdayFormatted}&dateTo=${tomorrowFormatted}`,{
         headers: {
-            'X-Auth-Token': "5cc4793ffe8046ec901e7b7695a480a0",
+            'X-Auth-Token': `${process.env.NEXT_PUBLIC_APIFOOT}`,
           }
     })
     const data = await res.json()

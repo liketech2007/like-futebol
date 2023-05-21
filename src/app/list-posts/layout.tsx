@@ -6,9 +6,13 @@ export default function PostListLayout({
   return (
       <>
       <head>
-      <meta name="description" content="Like Blog é um blog de tecnologia e dicas, oferecendo informações atualizadas sobre as últimas tendências tecnológicas, gadgets e aplicativos. Com uma abordagem concisa e fácil de entender, nosso objetivo é ajudar os leitores a aproveitarem ao máximo a tecnologia em suas vidas diárias. De análises de produtos a guias passo a passo, nosso conteúdo abrange uma ampla gama de tópicos, incluindo smartphones, dispositivos domésticos inteligentes, segurança cibernética, inteligência artificial e muito mais" />
-        <meta name="keywords" content="tecnologia, gadgets, aplicativos, análises, guias, smartphones, dispositivos domésticos inteligentes, segurança cibernética, inteligência artificial." />
-        <title>Like Blog - Artigos</title>
+      <meta name="description" content="Bem-vindo ao Like Futebol, o seu guia completo para o mundo do futebol. Aqui, oferecemos informações atualizadas sobre as últimas notícias, jogos, jogadores e tendências no universo do futebol. Com uma abordagem concisa e envolvente, nosso objetivo é manter você informado e entretido com o melhor conteúdo futebolístico.
+
+Dos destaques dos jogos mais recentes aos perfis detalhados de jogadores talentosos, nosso site abrange uma ampla gama de tópicos para satisfazer a sua paixão pelo futebol. Além disso, oferecemos análises aprofundadas, estatísticas e opiniões dos especialistas para fornecer uma perspectiva única sobre o esporte.
+
+Se você é um torcedor apaixonado, um entusiasta do futebol ou apenas alguém que deseja ficar por dentro das novidades do mundo do esporte, o Like Futebol é o seu destino definitivo. Junte-se a nós e mergulhe na empolgação e na emoção do futebol enquanto exploramos os aspectos fascinantes desse esporte amado por milhões de pessoas em todo o mundo." />
+<meta name="keywords" content="futebol, esporte, notícias, jogos, jogadores, tendências, análises, estatísticas, campeonatos, equipes, ligas, transferências, treinadores, táticas, gols, habilidades, partidas, resultados, curiosidades, competições, histórias, paixão, aficionados, torcida, estádios, mundial, craques, rivalidades, clássicos, seleções, treinamentos, técnicas, dribles, chutes, defesas, goleiros, jogadas, fair play, cartões, lesões, arbitragem, VAR, futebol feminino, categorias de base, campeonato nacional, jogos internacionais, apostas esportivas, fantasy football, futebol de praia, futsal, craques do passado, futebol e cultura, hooligans." />
+<title>Like Futebol - Artigos</title>
       </head>
           {children}
     </>

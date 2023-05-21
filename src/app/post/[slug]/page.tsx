@@ -12,8 +12,8 @@ import { Indexe } from "@/indexe/route";
 
 
 async function getData(slug: string) {
-    Indexe(`https://like-blog.vercel.app/${slug}`)
-    await fetch("https://like-blog.vercel.app/api")
+    Indexe(`https://like-futebol.vercel.app/${slug}`)
+    await fetch("https://like-futebol.vercel.app/api")
     const form = JSON.stringify({
         query:`
         query MyQuery {

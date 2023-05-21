@@ -24,35 +24,35 @@ const res1 = await fetch(`${process.env.NEXT_PUBLIC_HYGRAPH_URL}`,{
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://like-blog.vercel.app/</loc>
+  <loc>https://like-futebol.vercel.app/</loc>
   <lastmod>2023-05-17</lastmod>
 </url>
 
 <url>
-  <loc>https://like-blog.vercel.app/home</loc>
+  <loc>https://like-futebol.vercel.app/home</loc>
   <lastmod>2023-05-17</lastmod>
 </url>
 
 <url>
-  <loc>https://like-blog.vercel.app/sobre-nos</loc>
+  <loc>https://like-futebol.vercel.app/sobre-nos</loc>
   <lastmod>2023-05-17</lastmod>
 </url>
 <url>
-  <loc>https://like-blog.vercel.app/politica-de-privacidade</loc>
+  <loc>https://like-futebol.vercel.app/politica-de-privacidade</loc>
   <lastmod>2023-05-17</lastmod>
 </url>
 <url>
-  <loc>https://like-blog.vercel.app/list-posts</loc>
+  <loc>https://like-futebol.vercel.app/list-posts</loc>
   <lastmod>2023-05-17</lastmod>
 </url>
 <url>
-  <loc>https://like-blog.vercel.app/contscte-nos</loc>
+  <loc>https://like-futebol.vercel.app/contscte-nos</loc>
   <lastmod>2023-05-17</lastmod>
 </url>
   ${data.data.posts
     .map(
       (data:any) => `<url>
-        <loc>https://like-blog.vercel.app/post/${data.slug}</loc>
+        <loc>https://like-futebol.vercel.app/post/${data.slug}</loc>
         <lastmod>${data.date}</lastmod>
       </url>`,
     ).join('')}
@@ -71,14 +71,14 @@ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 >
 <channel>
 <title>Link blog</title>
-<atom:link href="https://like-blog.vercel.app/feed/" rel="self" type="application/rss+xml" />
+<atom:link href="https://like-futebol.vercel.app/feed/" rel="self" type="application/rss+xml" />
 <link>https://like-blog.vercel.app</link>
 <description>Blog de Tecnologia</description>
 <lastBuildDate>2023-05-17</lastBuildDate>
 <image>
-<url>https://like-blog.vercel.app/_next/static/media/logo.32e6ed5b.png</url>
-<title>Like Blog</title>
-<link>https://like-blog.vercel.app</link>
+<url>https://like-futebol.vercel.app/_next/static/media/logo.32e6ed5b.png</url>
+<title>Like Futebol</title>
+<link>https://like-futebol.vercel.app</link>
 <width>32</width>
 <height>32</height>
 </image>${data.data.posts
@@ -86,7 +86,7 @@ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
     (data:any) => `
       <item>
       <title>${data.title}</title>
-      <link>https://like-blog.vercel.app/post/${data.slug}</link>
+      <link>https://like-futebol.vercel.app/post/${data.slug}</link>
       <pubDate>${data.date}</pubDate>
       <description>${data.description}</description>
       </item>
