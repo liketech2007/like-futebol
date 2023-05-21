@@ -50,7 +50,7 @@ export function MAinApp(data:any) {
                     <div>
                         {
                             trocaLiga === false ? (
-                                <div className="my-6 text-xs md:text-base bg-gray-300 dark:bg-[#1E1E1F] dark:text-white p-4 rounded-lg">
+                                <div className="m-6 text-xs md:text-base bg-gray-300 dark:bg-[#1E1E1F] dark:text-white p-4 rounded-lg">
                                     <div className="flex justify-between bg-white dark:bg-secondary rounded-lg">
                                         <div className=" w-1/5 text-center p-4">Casa</div>
                                         <div className=" w-1/5 text-center p-4">Fora</div>
@@ -77,7 +77,7 @@ export function MAinApp(data:any) {
                                     <SpinnerGap size={48} className="animate-spin" />
                               </div>
                             ) : jogos.text === "Não tem Jogos" && jogos.jogos === null ? <div className="flex justify-center items-center min-h-[60vh]">Não tem Jogos</div> : (
-                                <div className="my-6 text-xs md:text-base  bg-gray-300 dark:bg-[#1E1E1F] dark:text-white p-4 rounded-lg">
+                                <div className="m-6 text-xs md:text-base  bg-gray-300 dark:bg-[#1E1E1F] dark:text-white p-4 rounded-lg">
                                 <div className="flex justify-between  bg-white dark:bg-secondary rounded-lg">
                                     <div className=" w-1/5 text-center p-4">Casa</div>
                                     <div className=" w-1/5 text-center p-4">Fora</div>
