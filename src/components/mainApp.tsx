@@ -44,13 +44,6 @@ export function MAinApp(data:any) {
                         })
                     }
                 </div>
-                <div className="flex justify-center items-center">
-                <div key={data.data.videos[0].embed} className="p-4 flex flex-col gap-6 min-w-[50%] border-button border-t-0 border-l-0 border-r-0 border-b-2 drop-shadow-lg">
-                                <h1 className="text-xl font-bold">{data.data.videos[0].title}</h1>
-                                <div dangerouslySetInnerHTML={{ __html: data.data.videos[0].embed }}></div>
-                                <div className="text-xs font-tin">{dateFormat(data.data.videos[0].date)}</div>
-                            </div>
-                </div>
                 <div>
                     <h2 className="text-2xl font-bold pt-4">{ligaCheck.name}</h2>
 
