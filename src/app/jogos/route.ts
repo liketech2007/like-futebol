@@ -1,11 +1,8 @@
-export const formatDate = (date:any) => {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-  };
+import { formatDate } from "@/futebol/getjogos";
+import { NextResponse } from "next/server";
 
-export async function getJogos(id:number) {
+
+export async function POST(request: Request) {
     const today = new Date();
     const yesterday = new Date(today);
     yesterday.setDate(today.getDate() - 1);
@@ -15,6 +12,8 @@ export async function getJogos(id:number) {
     const yesterdayFormatted = formatDate(yesterday)
     const tomorrowFormatted = formatDate(tomorrow)
 
+    const url = new URL(`${request.url}`)
+    const id = url.searchParams.get('id');
 
     const res = await fetch(`http://api.football-data.org/v4/competitions/${id}/matches?dateFrom=${yesterdayFormatted}&dateTo=${tomorrowFormatted}`,{
         headers: {
@@ -23,5 +22,7 @@ export async function getJogos(id:number) {
     })
     const data = await res.json()
 
-    return data
+
+    return data.matches.length === 0 ? NextResponse.json({ text: "Não tem Jogos", jogos: null}) : NextResponse.json({ text: "", jogos: data.matches})
+
 }
