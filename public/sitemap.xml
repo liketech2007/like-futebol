@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+  <loc>https://like-futebol.vercel.app/</loc>
+  <lastmod>2023-05-17</lastmod>
+</url>
+
+<url>
+  <loc>https://like-futebol.vercel.app/home</loc>
+  <lastmod>2023-05-17</lastmod>
+</url>
+
+<url>
+  <loc>https://like-futebol.vercel.app/sobre-nos</loc>
+  <lastmod>2023-05-17</lastmod>
+</url>
+<url>
+  <loc>https://like-futebol.vercel.app/politica-de-privacidade</loc>
+  <lastmod>2023-05-17</lastmod>
+</url>
+<url>
+  <loc>https://like-futebol.vercel.app/list-posts</loc>
+  <lastmod>2023-05-17</lastmod>
+</url>
+<url>
+  <loc>https://like-futebol.vercel.app/contscte-nos</loc>
+  <lastmod>2023-05-17</lastmod>
+</url>
+  <url>
+        <loc>https://like-futebol.vercel.app/post/as-principais-tendencias-tecnologicas-que-estao-transformando-o-mundo-dos-negocios</loc>
+        <lastmod>2023-05-17</lastmod>
+      </url><url>
+        <loc>https://like-futebol.vercel.app/post/como-a-inteligencia-artificial-esta-revolucionando-a-maneira-como-as-empresas-operam</loc>
+        <lastmod>2023-05-17</lastmod>
+      </url>
+  </urlset>

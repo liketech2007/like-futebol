@@ -1,13 +1,13 @@
 "use client"
-import { getJogos } from "@/futebol/getjogos"
 import { dateFormat } from "@/utils/dateFormat"
 import { SpinnerGap } from "@phosphor-icons/react"
 import { useState } from "react"
 export function MAinApp(data:any) {
     const [ligaSelect,setLigaSelect] = useState(data.data.ligas[0].id)
+    const [load,setLoad] = useState(false)
     const [trocaLiga,setTrocaLiga] = useState(false)
     const [jogos,setJogos] = useState({
-        jogos: false,
+        jogos: [],
         text: ""
     })
     const ligaCheck = data.data.ligas.find((liga:any) => {
@@ -23,8 +23,9 @@ export function MAinApp(data:any) {
                         data.data.ligas.map((liga:any) => {
                             return (
                                 <div key={liga.id} className={`flex justify-center items-center flex-col gap-2 max-w-[50px] ${ligaSelect === liga.id ? "border-button border-t-0 border-l-0 border-r-0 border-b-2 drop-shadow-lg" : ""}`} onClick={async() => {
+                                    setLoad(true)
                                     setJogos({
-                                            jogos: false,
+                                            jogos: [],
                                             text: ""
                                         })
                                     setLigaSelect(liga.id)
@@ -34,6 +35,7 @@ export function MAinApp(data:any) {
                                     })
                                     const data = await res.json()
                                     setJogos(data)
+                                    setLoad(false)
                                 }}>
                                     <img src={liga.emblem} alt={liga.name} className="w-full"/>
                                     <div className="text-xs text-transparent">{liga.name}</div>
@@ -77,7 +79,7 @@ export function MAinApp(data:any) {
                                         })
                                     }
                                 </div>
-                            ) : jogos.jogos === false ? (
+                            ) : load === true ? (
                                 <div className="flex justify-center items-center min-h-[60vh]">
                                     <SpinnerGap size={48} className="animate-spin" />
                               </div>
