@@ -44,10 +44,10 @@ export function MAinApp(data:any) {
                         })
                     }
                 </div>
-                <div className="flex flex-col justify-center items-center">
+                <div>
                     <h2 className="text-2xl font-bold pt-4">{ligaCheck.name}</h2>
 
-                    <div>
+                    <div className="flex flex-col justify-center items-center">
                         {
                             trocaLiga === false ? (
                                 <div className="m-6 text-xs md:text-base bg-gray-300 dark:bg-[#1E1E1F] dark:text-white p-4 rounded-lg max-w-[80%]">
