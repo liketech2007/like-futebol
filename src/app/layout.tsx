@@ -5,7 +5,7 @@ import { ContextTheme } from '../contexts/contextTheme'
 import { client } from "../utils/apolloClient"
 import { ApolloProvider } from "@apollo/client"
 import { Ads } from '@/components/ads'
-import logo from "../assets/logo.png"
+import logo from "../assets/logo-dark.png"
 import { Cookie } from '@/components/cookie'
 
 export default function RootLayout({

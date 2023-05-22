@@ -12,7 +12,7 @@ export function HeaderHome() {
   const [openMenu, setOpenMenu] = useState(false)
   const {theme,setTheme} = useContext(ContextTheme)
   return (
-    <header className="p-4 flex justify-between  md:w-[60%] lg:w-[80%]">
+    <header className="p-4 flex justify-between items-center  md:w-[60%] lg:w-[80%]">
       <Link href="/home">
        {
         theme === "" ?  <img src={logo.src} className="max-w-[100px]" alt="Logo do like blog"/> :  <img src={logoDark.src} className="max-w-[100px]"  alt="Logo do like blog"/>

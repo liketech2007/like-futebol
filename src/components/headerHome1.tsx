@@ -12,7 +12,7 @@ export function HeaderHome1() {
   const [openMenu, setOpenMenu] = useState(false)
   const {theme,setTheme} = useContext(ContextTheme)
   return (
-    <header className="p-4 flex justify-between  md:w-[60%] lg:w-[80%]">
+    <header className="p-4 flex justify-between items-center md:w-[60%] lg:w-[80%]">
       <Link href="/home">
        {
         theme === "" ?  <img src={logo.src} className="max-w-[100px]" alt="Logo do like blog"/> :  <img src={logoDark.src} className="max-w-[100px]"  alt="Logo do like blog"/>
@@ -53,7 +53,7 @@ export function HeaderHome1() {
         <div className={openMenu === false ? "z-50 flex justify-end items-end gap-4 flex-col md:hidden" :  "absolute top-2 right-2 flex justify-end items-end gap-4 flex-col md:hidden bg-gray-300 dark:bg-[#1E1E1F] p-4 rounded-lg drop-shadow-2xl"}>
           <div>
           { 
-            openMenu === true ? ( <X size={64} className="text-button dark:text-white transition-all" onClick={() => setOpenMenu(false)}/>) : ( <List size={64} className="text-button dark:text-white transition-all" onClick={() => setOpenMenu(true)}/>)
+            openMenu === true ? ( <X size={64} className="text-[#1E1E1F] dark:text-white transition-all" onClick={() => setOpenMenu(false)}/>) : ( <List size={64} className="text-[#1E1E1F] dark:text-white transition-all" onClick={() => setOpenMenu(true)}/>)
           }
           </div>
           {

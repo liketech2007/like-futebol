@@ -37,7 +37,7 @@ export function MainHome({ data } : any) {
                     )
                 })
             }
-             <Link href="/list-posts" className="self-end dark:bg-white dark:text-button bg-button text-white hover:bg-gray-300 hover:text-button dark:hover:bg-[#1E1E1F] dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de artigos</Link>
+             <Link href="/list-posts" className="m-6 self-end bg-button text-white hover:bg-transparent hover:text-button  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de artigos</Link>
             </div> 
 
             <div className="flex flex-row justify-center flex-wrap gap-4 p-4">
@@ -53,7 +53,7 @@ export function MainHome({ data } : any) {
                 }
             </div>
 
-            <Link href="/list-posts" className="m-6 self-end dark:bg-white dark:text-button bg-button text-white hover:bg-gray-300 hover:text-button dark:hover:bg-[#1E1E1F] dark:hover:text-white transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de artigos</Link>
+            <Link href="/list-posts" className="m-6 self-end bg-button text-white hover:bg-transparent hover:text-button  transition-all py-1 px-6 rounded-lg flex justify-center items-center">Ver lista de artigos</Link>
         </main>
     )
 }
